@@ -1,0 +1,39 @@
+set encoding=utf-8
+set ruler
+set autoread
+set showcmd
+
+set nu
+set cursorline
+set showmatch
+set laststatus=2
+set autoindent
+set smartindent
+set shiftwidth=4
+
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
+set wrapscan
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set hidden
+
+filetype on
+filetype indent on
+filetype plugin on
+autocmd FileType ruby setlocal sw=2 sts=2 ts=2 et
+au FileType html inoremap < <><LEFT>
+
+syntax on
+
+inoremap { {}<LEFT>
+inoremap {<Enter> {}<LEFT><CR><ESC><S-o>
+inoremap ( ()<LEFT>
+inoremap (<Enter> ()<LEFT><CR><ESC><S-o>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
