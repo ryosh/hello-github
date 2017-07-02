@@ -4,7 +4,6 @@ set autoread
 set showcmd
 
 set nu
-set cursorline
 set showmatch
 set laststatus=2
 set autoindent
@@ -22,6 +21,7 @@ set ignorecase
 set smartcase
 
 set hidden
+set noswapfile
 
 filetype on
 filetype indent on
@@ -35,5 +35,6 @@ inoremap { {}<LEFT>
 inoremap {<Enter> {}<LEFT><CR><ESC><S-o>
 inoremap ( ()<LEFT>
 inoremap (<Enter> ()<LEFT><CR><ESC><S-o>
+inoremap [ []<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
