@@ -18,3 +18,7 @@ softhsm2-util --import hash.private.pem --slot 748138923 --label iotkey --id 000
 pkcs11-tool --list-objects --slot 1748834104 --module /usr/lib/softhsm/libsofthsm2.so -l
 pkcs11-tool --list-objects --slot 748138923 --module /usr/lib/softhsm/libsofthsm2.so -l
 ```
+
+```
+SLOT=`softhsm2-util --show-slots | grep -m 1 Slot | awk '{print $2}'`
+```
