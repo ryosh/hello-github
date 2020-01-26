@@ -35,3 +35,35 @@ SLOT=`softhsm2-util --show-slots | grep -m 1 Slot | awk '{print $2}'` &&\
 softhsm2-util --import hash.private.pem --slot ${SLOT} --label iotkey --id 0000 --pin 1234 && \
 pkcs11-tool --list-objects --slot ${SLOT} --module /usr/lib/softhsm/libsofthsm2.so -l  --pin 1234
 ```
+
+```
+<template lang="pug">
+  .hello
+    .ex
+      button(@click="show = !show")
+        | Toggle show
+      transition(name="bounce")
+        p(v-if="show")
+          | xxxxxxxxxxxxxxxxxxxxxxxx
+</template>
+
+<style lang="stylus" scoped>
+.hello
+  .bounce-enter-active
+    animation bounce-in 3.5s;
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0);
+    }
+    /*
+    50% {
+      transform: scale(1.5)
+    }
+    */
+    100% {
+      transform: scale(1)
+    }
+  }
+</style>
+
+```
